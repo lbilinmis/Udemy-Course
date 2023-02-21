@@ -1,0 +1,28 @@
+﻿@model List<Student>
+
+@{
+    ViewData["Title"] = "StudentList";
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Adı</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

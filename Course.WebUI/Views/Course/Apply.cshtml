@@ -1,0 +1,37 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Apply";
+}
+
+<form asp-action="Apply" asp-controller="Course">
+    <div asp-validation-summary="All"></div>
+    <p>
+        <label for="Name">Adınız</label>
+        <input class="form-control" type="text" name="Name" />
+    </p>
+
+
+    <p>
+        <label for="Email">Eposta</label>
+        <input class="form-control" type="text" name="Email" />
+    </p>
+
+
+    <p>
+        <label for="Phone">Telefon</label>
+        <input class="form-control" type="text" name="Phone" />
+    </p>
+
+
+    <p>
+        <label asp-for="Confirm">Kursa katılacak mısınız</label>
+        <select asp-for="Confirm" class="form-control select">
+            <option value="true">Evet Katılacağım</option>
+            <option value="false">Hayır Katılmayacağım</option>
+        </select>
+    </p>
+
+
+    <input class="btn btn-succe" type="submit" value="Gönder" />
+</form>

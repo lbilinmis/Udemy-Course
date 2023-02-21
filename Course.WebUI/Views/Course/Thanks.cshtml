@@ -1,0 +1,25 @@
+﻿@model Student
+
+@{
+    ViewData["Title"] = "Thanks";
+}
+
+<h1>Thanks</h1>
+
+<div class="container container-fluid">
+    Merhaba @Model.Name
+    <br />
+
+    @if (Model.Confirm == true)
+    {
+            <br />
+        <span class="alert alert-primary"> Kursumuza kayıt başarılı </span>
+        <p>Diğer katılımcıları görüntülemek için  <a asp-action="StudentList" asp-controller="Course">tıklayın..</a> </p>
+    }
+    else
+    {
+        <span class="alert alert-primary"> Kursumuza kayıt başarısız </span>
+    }
+
+</div>
+
