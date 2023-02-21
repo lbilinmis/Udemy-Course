@@ -33,7 +33,7 @@ namespace Course.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                Repository.RepositoryData.AddStudent(student);
+                RepositoryData.AddStudent(student);
                 return View("Thanks", student);
 
             }
