@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Course.MovieWebUI.Models;
+using Course.MovieWebUI.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Course.MovieWebUI.Controllers
 {
@@ -6,7 +8,8 @@ namespace Course.MovieWebUI.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var list = Repository.Repository.Movies;
+            return PartialView(list);
         }
 
         public IActionResult Create()
@@ -14,16 +17,24 @@ namespace Course.MovieWebUI.Controllers
             return View();
         }
 
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
-            return View();
+            Movie movie=Repository.Repository.GetMovieById(id);
+
+            return View(movie);
         }
 
 
         public IActionResult List()
         {
-            return View();
+            var list = Repository.Repository.Movies;
+            return View(list);
         }
 
+        public IActionResult PartialMovies()
+        {
+            var list = Repository.Repository.Movies;
+            return PartialView(list);
+        }
     }
 }

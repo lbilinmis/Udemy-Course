@@ -1,7 +1,24 @@
-﻿
+﻿@model Movie
+
 @{
     ViewData["Title"] = "Detail";
 }
 
-<h1>Detail</h1>
+<div class="card-group">
+  
+
+        <div class="card">
+            <img class="card-img-top" src="@Model.ImageUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">
+                <a asp-action="Detail" asp-controller="Movie" asp-route-id="@Model.Id">
+                    @Model.Name
+                    </a>
+                </h5>
+            <p class="card-text">@Model.Description</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    
+</div>
 
