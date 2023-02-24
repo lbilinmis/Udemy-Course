@@ -1,4 +1,5 @@
-﻿using Course.MovieWebUI.Models;
+﻿using Course.CategoryWebUI.Repository;
+using Course.MovieWebUI.Models;
 using Course.MovieWebUI.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,8 +9,14 @@ namespace Course.MovieWebUI.Controllers
     {
         public IActionResult Index()
         {
-            var list = Repository.Repository.Movies;
-            return PartialView(list);
+            var list = Repository.MovieRepository.Movies;
+            var catlist = CategoryRepository.Categories;
+
+            CategoryMovieVM categoryMovieVM = new CategoryMovieVM();
+            categoryMovieVM.Movies= list;
+            categoryMovieVM.Categories= catlist;
+
+            return PartialView(categoryMovieVM);
         }
 
         public IActionResult Create()
@@ -19,7 +26,7 @@ namespace Course.MovieWebUI.Controllers
 
         public IActionResult Detail(int id)
         {
-            Movie movie=Repository.Repository.GetMovieById(id);
+            Movie movie=Repository.MovieRepository.GetMovieById(id);
 
             return View(movie);
         }
@@ -27,14 +34,20 @@ namespace Course.MovieWebUI.Controllers
 
         public IActionResult List()
         {
-            var list = Repository.Repository.Movies;
+            var list = Repository.MovieRepository.Movies;
             return View(list);
         }
 
         public IActionResult PartialMovies()
         {
-            var list = Repository.Repository.Movies;
+            var list = Repository.MovieRepository.Movies;
             return PartialView(list);
         }
+        public IActionResult PartialMenu()
+        {
+            return PartialView();
+        }
+
+        
     }
 }

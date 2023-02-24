@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Course.WebUI", "Course.WebUI\Course.WebUI.csproj", "{D8324022-A69F-40A1-9E77-5A4F0043E016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course.MovieWebUI", "Course.MovieWebUI\Course.MovieWebUI.csproj", "{D7D679DA-36DC-4562-A614-827DB0DEE117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Course.MovieWebUI", "Course.MovieWebUI\Course.MovieWebUI.csproj", "{D7D679DA-36DC-4562-A614-827DB0DEE117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Course.FormWebUI", "Course.FormWebUI\Course.FormWebUI.csproj", "{79EC72BB-1595-4901-84A9-7A5FBB89B869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D7D679DA-36DC-4562-A614-827DB0DEE117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7D679DA-36DC-4562-A614-827DB0DEE117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7D679DA-36DC-4562-A614-827DB0DEE117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EC72BB-1595-4901-84A9-7A5FBB89B869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EC72BB-1595-4901-84A9-7A5FBB89B869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EC72BB-1595-4901-84A9-7A5FBB89B869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EC72BB-1595-4901-84A9-7A5FBB89B869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

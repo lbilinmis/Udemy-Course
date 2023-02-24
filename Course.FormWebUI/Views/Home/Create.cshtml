@@ -1,0 +1,45 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<form asp-action="Create" asp-controller="Home" method="post">
+    <div class="form-group">
+        <label for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+
+     <div class="form-group">
+        <label for="Description"></label>
+        <input type="text" asp-for="Description"  class="form-control" />
+    </div>
+     <div class="form-group">
+        <label for="Price"></label>
+        <input type="text" asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="Category"></label>
+        <select class="form-select" asp-for="Category">
+            <option selected disabled>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+
+
+
+    
+
+    <div class="form-check">
+        <input class="form-check-input" asp-for="IsApproved">
+        <label class="form-check-label" for="IsApproved">
+            IsApproved
+        </label>
+    </div>
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</form>

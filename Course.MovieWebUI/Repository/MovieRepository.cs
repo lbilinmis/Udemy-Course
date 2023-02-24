@@ -2,7 +2,7 @@
 
 namespace Course.MovieWebUI.Repository
 {
-    public static class Repository
+    public static class MovieRepository
     {
         private static List<Movie> _movies = null;
         public static List<Movie> Movies { get { return _movies; } }
@@ -16,7 +16,7 @@ namespace Course.MovieWebUI.Repository
             return _movies.FirstOrDefault(x => x.Id == id);
         }
 
-        static Repository()
+        static MovieRepository()
         {
             _movies = new List<Movie>()
             {
